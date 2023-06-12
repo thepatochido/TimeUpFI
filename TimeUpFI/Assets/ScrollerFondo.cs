@@ -15,6 +15,8 @@ public class ScrollerFondo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        offset += (Time.deltaTime * velocidadScroll) / 10f;
+        material1.SetTextureOffset("_MainTex",new Vector2 (offset,0));
+
     }
 }
